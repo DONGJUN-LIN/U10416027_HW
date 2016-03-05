@@ -1,0 +1,43 @@
+U10416027 董郡麟 2016/3/5
+
+//import java api
+import java.util.Scanner;
+
+//main class
+public class RepeatAdditionQuiz{
+	//main method
+	public static void main(String[] args){
+		//import scanner
+		Scanner scan = new Scanner(System.in);
+		
+		//data fields
+		private int check;
+		private int ans;
+		private int num1 = (int)(Math.random() * 10);
+		private int num2 = (int)(Math.random() * 10);
+		
+		//ask the user what is the answer
+		System.out.println("What is the answer " +num1+ " + " +num2+ " is ?" );
+		
+		//enter answer
+		ans = scan.nextInt();
+		
+		//judge the answer is correct or not
+		while(num1 + num2 != ans){
+			System.out.println("wrong, enter again");
+			check = ans;
+			ans = scan.nextInt();
+			
+			//judge the integer is already entered or not
+			while(ans == check){
+				System.out.println("you already enter " + check);
+				ans = scan.nextInt();
+			}
+		}
+		
+		//answer is correct
+		if(num1 + num2 == ans){
+			System.out.println("You got it!!");
+		}
+	}
+}
