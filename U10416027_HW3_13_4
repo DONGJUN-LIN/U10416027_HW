@@ -4,24 +4,50 @@
 import java.util.*;
 import java.util.Scanner;
 
-public class PrintCalendar{
+public class DisplayCalendars{
 	//main method
 	public static void main(String[] args){
+		int a = 0;
+		int y = 0;
+		int m = 0;
 		
 		//use GregorianCalendar object
 		Calendar c = new GregorianCalendar();
 		Scanner input = new Scanner(System.in);
 		
-		//prompt users enter year
-		System.out.print("請輸入年份: ");
-		int y = input.nextInt();
+		System.out.println("\n你要自己輸入幾年幾月嗎?? YES:1 , NO:0");
+		a = input.nextInt();
+		if(a == 1){
+			//prompt users enter year
+			System.out.print("請輸入年份: ");
+			y = input.nextInt();
 		
-		//prompt users enter month
-		System.out.print("請輸入月份: ");
-		int m = input.nextInt();
+			//prompt users enter month
+			System.out.print("請輸入月份: ");
+			m = input.nextInt();
+		}
+			
 		
+		if(a == 0){
+			y = c.get(Calendar.YEAR);
+			m = c.get(Calendar.MONTH);
+		}
+		
+		if(a != 0 && a != 1){
+			System.out.println("輸入錯誤\n");
+			
+			//prompt users enter year
+			System.out.print("請輸入年份: ");
+			y = input.nextInt();
+		
+			//prompt users enter month
+			System.out.print("請輸入月份: ");
+			m = input.nextInt();
+		}
+
 		//print the calender
 		printMonth(y, m);
+		
 		System.out.println("------------------------------------");
 		System.out.println("");
 		System.out.println("現在日期, 時間: " + c.get(Calendar.YEAR) +"年");
