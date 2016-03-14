@@ -12,7 +12,7 @@ public class Additionquiz{
 		Scanner scan = new Scanner(System.in);
 		
 		//creat arraylist object
-	    ArrayList array = new ArrayList();
+		ArrayList array = new ArrayList();
 		
 		//data fields
 		int ans;
