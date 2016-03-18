@@ -5,14 +5,14 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 //main class
-public class Additionquiz{
+public class RepeatAdditionQuiz{
 	//main method
 	public static void main(String[] args){
 		//import scanner
 		Scanner scan = new Scanner(System.in);
 		
 		//creat arraylist object
-		ArrayList array = new ArrayList();
+	    ArrayList array = new ArrayList();
 		
 		//data fields
 		int ans;
@@ -40,7 +40,6 @@ public class Additionquiz{
 			}
 			array.add(ans);
 		}
-		
 		//answer is correct
 		System.out.println("答對了!!");
 	}
