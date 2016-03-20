@@ -16,7 +16,7 @@ public class UseRepeatAdditionQuiz{
 		RepeatAdditionQuiz r = new RepeatAdditionQuiz();
 		
 		//creat arraylist object
-	    ArrayList array = new ArrayList();
+	    	ArrayList array = new ArrayList();
 		
 		//ask the user what is the answer
 		System.out.println("What is the answer " + r.getNum1() + " + " + r.getNum2() + " is ?" );
